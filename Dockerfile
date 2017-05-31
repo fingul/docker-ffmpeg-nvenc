@@ -1,5 +1,5 @@
-FROM ubuntu:xenial
-MAINTAINER Benoît Vidis <contact@benoitvidis.com>
+FROM nvidia/cuda:8.0-devel-ubuntu16.04
+MAINTAINER fingul <fingul@gmail.com>
 
 WORKDIR /root
 RUN  echo "deb http://archive.ubuntu.com/ubuntu/ xenial multiverse" > /etc/apt/sources.list.d/multiverse.list \
