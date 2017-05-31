@@ -15,13 +15,14 @@ Once downloaded, mount the zip file as a volume and set its location using `SDK_
 i.e.:
 
 ```
-docker run -rm --name ffmpegnvenc -v `pwd`/Video_Codec_SDK_7.1.9.zip:/tmp/sdk.zip -e SDK_PATH=/tmp/sdk.zip -ti vidiben/ffmpeg-nvenc 
+docker build -t ff .
+docker run -rm --name ffmpegnvenc -v `pwd`/Video_Codec_SDK_8.0.14.zip:/tmp/sdk.zip -e SDK_PATH=/tmp/sdk.zip -ti ff
 ```
 
 Once built, copy the ffmpeg binary
 
 ```
-docker cp ffmpegnvenc:/usr/bin/ffmpeg ~/bin/ffmpeg
+docker cp ff:/usr/bin/ffmpeg ~/bin/ffmpeg
 ```
 
 
